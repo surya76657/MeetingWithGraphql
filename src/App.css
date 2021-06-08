@@ -1,38 +1,118 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  border: 1px solid #14bf14;
+  margin: 60px auto;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard h2 {
+  text-align: center;
+}
+
+.dashboard .list {
+  padding: 0;
+}
+
+.dashboard .list-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  margin-bottom: 8px;
+  padding: 8px 0;
+}
+
+.dashboard .list-item p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.dashboard .list-item span {
+  font-size: 14px;
+}
+.dashboard button {
+  width: 100%;
+  height: 31px;
+}
+
+.add-meeting {
+  display: flex;
+  flex-direction: column;
+}
+.add-meeting h2 {
+  text-align: center;
+}
+.add-meeting table {
+  width: 100%;
+}
+
+.choose-room h2 {
+  text-align: center;
+}
+
+.choose-room .list {
+  padding: 0;
+}
+
+.choose-room .list-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.choose-room .list-item p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.choose-room .list-item span {
+  font-size: 14px;
+}
+.list-item.selected {
+  background-color: #61dafb;
+}
+
+button {
+  cursor: pointer;
+}
+.button-container {
+  margin-top: 8px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.button-container button {
+  width: 100px;
+  height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input,
+select {
+  width: 200px;
 }
